@@ -3,7 +3,7 @@ class RepositoriesController < ApplicationController
     resp = Faraday.get "https://api.github.com/user/repos" do |req|
       req.headers['Authorization'] = "token #{session[:token]}"
       req.headers['Accept'] = 'application/json'
-    end 
+    end
     @repos = JSON.parse(response.body)
   end
 
