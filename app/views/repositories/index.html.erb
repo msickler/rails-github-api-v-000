@@ -6,7 +6,7 @@
     <ul>
       <% @repos.each do |repo| %>
         <li><%= link_to repo["name"], repo["html_url"] %><br>
-        Description: <%= repo["description"] %></li>        
+        Description: <%= repo["description"] %></li>
       <% end %>
     </ul>
 
